@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Open+Sans:wght@400;500;600;700;800&family=Poiret+One&family=Poppins:wght@300;400;500;600;700;800&family=Preahvihear&family=Quicksand:wght@400;500;600;700&family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* wrapper is the main display of the website. */
+.wrapper {
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Preahvihear', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    height: 100vh;
+}
+
+/* this is child of wrapper  */
+.inner {
+    width: 80%;
+    margin: auto;
+    background: white;
+    height: 100vh;
+    padding: 2rem;
+}
+
+/* first child of inner */
+.inner header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+/* to Style all button inside header */
+.inner header div button {
+    border: none;
+    background: white;
+    color: #FF6D21;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .5px;
+    font-family: 'Balsamiq Sans', cursive !important;
+}
+
+/* second child of inner */
+.inner main {
+    height: 80%;
+    display: grid;
+    grid: auto / 50% 50%;
+}
+
+/* first child of main */
+.child_one {
+    align-self: center;
+}
+
+/* second child of main */
+.child_two {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    min-width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main's child typography & svgs */
+.child_one small {
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 1rem 1rem .3rem;
+}
+
+.child_one small svg {
+    margin: 0 .5rem;
+}
+
+.child_one h1 {
+    font-weight: bolder;
+    padding: 1rem 1rem 0 0;
+    font-size: 4rem;
+    line-height: 5rem;
+    font-family: 'Anton', sans-serif;
+    color: rgba(0, 0, 0, 0.808);
+}
+
+.child_one p {
+    font-size: 1rem;
+    padding: 1rem 1rem 1rem 0;
+    color: grey;
+}
+
+.child_two h5 {
+    padding: 1rem 1rem 1rem 1rem;
+    color: red;
+    font-size: 1rem;
+    background: rgba(255, 0, 0, 0.171);
+    border-radius: .5rem;
+}
+
+/* to style button of first child of .child_one */
+.child_one div button {
+    border: none;
+    background: none;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+    font-family: 'Balsamiq Sans', cursive !important;
+    letter-spacing: 1px;
+}
+
+/* First button  */
+.child_one div button:nth-child(1) {
+    background: #FF6D21;
+    border-radius: 1rem 1rem 0 1rem;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* second button  */
+.child_one div button:nth-child(2) {
+    border-radius: 0rem 1rem 1rem 1rem;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.068);
+    margin: 0 3rem;
+    border: 2px black solid;
+}
+
+/* to style child_two banner image  */
+.child_two img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 2rem 2rem 2rem 2rem;
+}
+
+
+
+/* Specially for Base.jsx's selection  */
+.select {
+    font-size: 1rem;
+    font-weight: bold;
+    height: 50px;
+    margin: 1rem 0 1rem 0;
+    width: 200px;
+    background: white;
+    border: none;
+    font-family: 'Balsamiq Sans', cursive !important;
+    padding: 1rem;
+}
+
+.select::focus {
+    border: none;
+    outline: none;
+}
+
+/* Specially for Toppins -  .ToppinsButton , .add   */
+.listedItems {
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0.075);
+    justify-content: space-between;
+    align-items: center;
+    margin: .3rem;
+    padding: .5rem .8rem;
+}
+
+.listedItems h3 {
+    padding: 0 .4rem;
+    text-transform: capitalize;
+}
+
+.listedItems button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ToppinsButton {
+    background: none;
+    border: none;
+    padding: .5rem .8rem;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.582);
+    font-family: 'Balsamiq Sans', cursive !important;
+    background: rgba(0, 0, 0, 0.062);
+    margin: .3rem;
+}
+
+.add {
+    font-size: 3rem;
+    opacity: .5;
+}
+
+/* Responsiveness  */
+
+@media screen and (max-width: 1150px) {
+    .child_one div button {
+        width: 45%;
+        margin: .3rem .3rem !important;
+        border-radius: .3rem !important;
+        border: none !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .inner {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .inner {
+        width: 100%;
+    }
+
+    .child_one h1 {
+        font-size: 3rem;
+        line-height: 3.2rem;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .child_two {
+        display: block;
+        border: 1px rgba(128, 128, 128, 0.336) solid;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        height: fit-content;
+    }
+
+    .child_two img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .inner main {
+        height: 80%;
+        display: grid;
+        grid: auto 50% /auto;
+    }
+}
