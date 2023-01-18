@@ -1,5 +1,3 @@
-// -C
-// Required Stuff
 import Styles from "../../styles/Home.module.css"
 import { motion } from 'framer-motion'
 import Image from "next/image"
@@ -17,7 +15,7 @@ export default function Base({ toNext, updateBase }) {
         )
     })
     return (
-        <motion.main animate={{ y: [1000, 0] }} transition={{ type: "spring", damping: 3, ease: [0.075, 0.82, 0.165, 1] }}>
+        <motion.main animate={{ y: [1000, 0] }} transition={{duration: 10, type: "spring", damping: 3, ease: [0.075, 0.82, 0.165, 1] }}>
             <div className={Styles.child_one}>
                 <h1>Choose your favorite Base </h1>
                 <br />

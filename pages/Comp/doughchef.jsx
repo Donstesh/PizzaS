@@ -1,10 +1,8 @@
-// -C
-// Required stuff
 import Styles from "../../styles/Home.module.css"
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 export default function UpdateChef({ toNext, UpdateChef }) {
-    // Simple Code Base 
+
     const ChefData = [{
         name: "chef-1",
         id: "chef-1",
@@ -14,18 +12,18 @@ export default function UpdateChef({ toNext, UpdateChef }) {
         id: "chef-2",
         wrapperId: "wrapper-2"
     }]
-    // Toppins State which is user selected toppins 
+
     const [chefs, addChef] = useState([])
-    // State of showing alert while user dont select toppins and switch place
+
     const [showAleart, setShowAleart] = useState(false)
-    // Mapping Button to select toppins
+
     const addChefButtonList = ChefData.map((v, i) => {
         return (
             <motion.button whileTap={{ opacity: [1, .5, 1] }} key={v.name} className={Styles.ToppinsButton} onClick={() => { addChef([...chefs, v.name]); setShowAleart(false) }
             }>{v.name}</motion.button>
         )
     })
-    // Mapping Button to remove toppins and show selected toppins
+
     const addedChefButtonList = [...new Set(chefs)].map((v, i) => {
         return (
             <motion.li animate={{ y: [-10, 0] }} key={v} className={Styles.listedItems}><h3>{v}</h3> <button onClick={() => {
@@ -39,7 +37,7 @@ export default function UpdateChef({ toNext, UpdateChef }) {
         )
     })
     return (
-        <motion.main animate={{ y: [1000, 0] }} transition={{ type: "spring", damping: 3, ease: [0.075, 0.82, 0.165, 1] }}>
+        <motion.main animate={{ y: [1000, 0] }} transition={{duration: 7, type: "spring", damping: 3, ease: [0.075, 0.82, 0.165, 1] }}>
             <div className={Styles.child_one}>
                 <h1>Chef Selection</h1> <br />
                 <small>select Chef for pizza Toppings <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF6D21" className="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -60,7 +58,7 @@ export default function UpdateChef({ toNext, UpdateChef }) {
                 </div>
             </div>
             <div className={Styles.child_two}>
-                {showAleart && <h5>! Please Select atleast one Chef</h5>}
+                {showAleart && <h5>! Please Select one Chef For Pizza Toppings</h5>}
                 <ul>
                     {addedChefButtonList}
                 </ul>
