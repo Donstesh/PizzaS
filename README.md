@@ -19,13 +19,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ####          `comment out lines 84-88 and 107-119`
 ####          `comment out lines 150-151` to by pass authentication error
  2. #### Line 748 `app.use('/internal-reporting/kpi', kpiRouter);`
- 3. #### Line 748 `app.use('/internal-reporting/dashboard', dashboardRouter);`
+ 3. #### Line 749 `app.use('/internal-reporting/dashboard', dashboardRouter);`
  4. #### Line 959 `app.use('/internal-reporting/combos', combosRouter);`
 
 
 ### ScopeID error kpi.js
 
-#### Line 959 `const clientId = (action === 'globalReport') ? clientList : (req?.user?.scopeId || clientList);`
+#### Line 353 `const clientId = (action === 'globalReport') ? clientList : (req?.user?.scopeId || clientList);`
 
 ###          dashboard.js
 
